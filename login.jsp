@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once("include/User.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Username atau Password salah')</script>";
     }
 }
-?>
+?> -->
 
 <!DOCTYPE HTML>
 <html>
