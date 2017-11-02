@@ -76,8 +76,6 @@ CREATE TABLE `user` (
   `name` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  `isDriver` tinyint(4) NOT NULL,
   `profilePic` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

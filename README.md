@@ -1,5 +1,10 @@
 # Tugas 2 IF3110 Pengembangan Aplikasi Berbasis Web
 
+### Important Note
+Port webapp : 8080
+Port identity : 8081
+Port ojek online service : 8082
+
 Melakukan *upgrade* Website ojek online sederhana pada Tugas 1 dengan mengaplikasikan **arsitektur web service REST dan SOAP**.
 
 **Luangkan waktu untuk membaca spek ini sampai selesai. Kerjakan hal yang perlu saja.**
