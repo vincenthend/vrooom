@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Database {
 
-    private static final String connection_string = "jdbc:mysql://127.0.0.1:3306/vrooom_account";
+    private static final String connection_string = "jdbc:mysql://127.0.0.1:3306/vrooom_ojek";
     private final String username;
     private final String password;
     private Connection connection;
@@ -55,7 +55,7 @@ public class Database {
 
             database.openConnection();
 
-            database.update("INSERT INTO user VALUES (1, 'avatar', 'roland', 12345, 'roland@theavatar.com', 'rolandcarry4tubes', false, NULL)");
+            database.update("INSERT INTO user VALUES (1, 'avatar', 'roland', 12345, 'roland@theavatar.com', NULL)");
 
             ArrayList<ArrayList<String>> result = new ArrayList<>();
             database.select("SELECT * FROM user", result);
@@ -66,17 +66,13 @@ public class Database {
                 String name = row.get(2);
                 String phone = row.get(3);
                 String email = row.get(4);
-                String password = row.get(5);
-                boolean isDriver = Boolean.parseBoolean(row.get(6));
-                String profilePic = row.get(7);
+                String profilePic = row.get(5);
 
                 System.out.println("id = " + id);
                 System.out.println("username = " + username);
                 System.out.println("name = " + name);
                 System.out.println("phone = " + phone);
                 System.out.println("email = " + email);
-                System.out.println("password = " + password);
-                System.out.println("isDriver = " + isDriver);
                 System.out.println("profilePic = " + profilePic);
                 System.out.println("----------------------------");
             }
