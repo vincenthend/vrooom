@@ -35,6 +35,8 @@ public class Database {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
 
+        result.clear();
+
         ResultSetMetaData metadata = resultSet.getMetaData();
         int column_count = metadata.getColumnCount();
 
