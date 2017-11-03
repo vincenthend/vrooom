@@ -1,12 +1,14 @@
 package user;
 
+import interfaces.user.PrefLoc;
+
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 @WebService
-public class PreferredLocation {
+public class PrefLocImpl implements PrefLoc {
 
-  @WebMethod
+  @Override
   public String addPrefLoc(String accessToken, String location){
     // Check Token
 
@@ -14,7 +16,7 @@ public class PreferredLocation {
     return null;
   }
 
-  @WebMethod
+  @Override
   public String deletePrefLoc(String accessToken, String location){
     // Check Token
 
@@ -22,7 +24,7 @@ public class PreferredLocation {
     return null;
   }
 
-  @WebMethod
+  @Override
   public String editPrefLoc(String accessToken, String oldLocation, String newLocation){
     // Check Token
 

@@ -4,5 +4,5 @@
     <endpoint name='History' implementation='user.History' url-pattern='/services/user/history'/>
     <endpoint name='Profile' implementation='user.Profile' url-pattern='/services/user/profile'/>
     <endpoint name='PreferredLocation' implementation='user.PreferredLocation' url-pattern='/services/user/preferredlocation'/>
-    <endpoint name='order.Order' implementation='order.Order' url-pattern='/services/order'/>
+    <endpoint name='Order' implementation='order.Order' url-pattern='/services/order'/>
 </endpoints>

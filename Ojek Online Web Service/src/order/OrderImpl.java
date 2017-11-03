@@ -1,12 +1,13 @@
 package order;
 
-import javax.jws.WebMethod;
+import interfaces.order.Order;
+
 import javax.jws.WebService;
 
 @WebService
-public class Order {
+public class OrderImpl implements Order {
 
-  @WebMethod
+  @Override
   public String getProfile(String access_token) {
 
     return null;

@@ -1,10 +1,12 @@
 package user;
+import interfaces.user.Profile;
+
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 @WebService()
-public class Profile {
-  @WebMethod
+public class ProfileImpl implements Profile {
+  @Override
   public String getProfile(String access_token) {
     // Check Access Token to Identity Service
 
