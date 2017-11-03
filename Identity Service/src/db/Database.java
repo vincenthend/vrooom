@@ -1,3 +1,5 @@
+package db;
+
 import java.sql.*;
 import java.util.*;
 
@@ -53,7 +55,7 @@ public class Database {
     /*
     public static void main(String[] args) {
         try {
-            Database database = new Database();
+            db.Database database = new db.Database();
 
             database.openConnection();
 

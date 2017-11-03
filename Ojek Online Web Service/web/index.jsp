@@ -7,10 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>Ojek Online Web Service</title>
-  </head>
-  <body>
-  Oops! What are you doing here! :(
-  </body>
+</head>
+<body>
+Oops! What are you doing here! :(
+</body>
 </html>

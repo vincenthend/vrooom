@@ -1,3 +1,5 @@
+package db;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -40,9 +42,9 @@ public class Database {
         ResultSetMetaData metadata = resultSet.getMetaData();
         int column_count = metadata.getColumnCount();
 
-        while(resultSet.next()) {
+        while (resultSet.next()) {
             ArrayList<String> row = new ArrayList<>();
-            for(int cnt=1; cnt<=column_count; cnt++) row.add(resultSet.getString(cnt));
+            for (int cnt = 1; cnt <= column_count; cnt++) row.add(resultSet.getString(cnt));
 
             result.add(row);
         }
@@ -53,7 +55,7 @@ public class Database {
     /*
     public static void main(String[] args) {
         try {
-            Database database = new Database();
+            db.Database database = new db.Database();
 
             database.openConnection();
 
