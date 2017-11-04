@@ -33,11 +33,10 @@ public class Database {
         statement.close();
     }
 
-    public void select(String query, ArrayList<ArrayList<String>> result) throws Exception {
+    public ArrayList<ArrayList<String>> select(String query) throws Exception {
+        ArrayList<ArrayList<String>> result = new ArrayList<>();
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
-
-        result.clear();
 
         ResultSetMetaData metadata = resultSet.getMetaData();
         int column_count = metadata.getColumnCount();
@@ -51,7 +50,10 @@ public class Database {
 
         resultSet.close();
         statement.close();
+
+        return result;
     }
+
     /*
     public static void main(String[] args) {
         try {
@@ -59,29 +61,24 @@ public class Database {
 
             database.openConnection();
 
-            database.update("INSERT INTO user VALUES (1, 'avatar', 'roland', 12345, 'roland@theavatar.com', 'rolandcarry4tubes', false, NULL)");
+            database.update("INSERT INTO user VALUES (1, 'avatar', 'email', 'roland', 12345)");
+            database.update("INSERT INTO user VALUES (2, 'avatara', 'email2', 'rolanda', 123456)");
+            database.update("INSERT INTO user VALUES (3, 'avatarb', 'email3', 'rolandaa', 123457)");
 
-            ArrayList<ArrayList<String>> result = new ArrayList<>();
-            database.select("SELECT * FROM user", result);
+            ArrayList<ArrayList<String>> result = database.select("SELECT * FROM user");
 
             for(ArrayList<String> row : result) {
                 int id = Integer.parseInt(row.get(0));
                 String username = row.get(1);
-                String name = row.get(2);
-                String phone = row.get(3);
-                String email = row.get(4);
-                String password = row.get(5);
-                boolean isDriver = Boolean.parseBoolean(row.get(6));
-                String profilePic = row.get(7);
+                String email = row.get(2);
+                String password = row.get(3);
+                String token = row.get(4);
 
                 System.out.println("id = " + id);
-                System.out.println("username = " + username);
-                System.out.println("name = " + name);
-                System.out.println("phone = " + phone);
+                System.out.println("username = " + username);;
                 System.out.println("email = " + email);
                 System.out.println("password = " + password);
-                System.out.println("isDriver = " + isDriver);
-                System.out.println("profilePic = " + profilePic);
+                System.out.println("token = " + token);
                 System.out.println("----------------------------");
             }
 
@@ -92,4 +89,5 @@ public class Database {
         }
     }
     */
+
 }
