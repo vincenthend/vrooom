@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @WebServlet(name = "user.Validator")
 public class Validator extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         JSONObject auth_token = new JSONObject(request.getParameter("token"));
         boolean token_valid = false;
@@ -33,7 +34,10 @@ public class Validator extends HttpServlet {
                     token_valid = true;
                 }
             }
-        } catch (Exception e) {
+
+            db.closeConnection();
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
 
