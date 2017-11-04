@@ -33,11 +33,10 @@ public class Database {
         statement.close();
     }
 
-    public void select(String query, ArrayList<ArrayList<String>> result) throws Exception {
+    public ArrayList<ArrayList<String>> select(String query) throws Exception {
+        ArrayList<ArrayList<String>> result = new ArrayList<>();
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
-
-        result.clear();
 
         ResultSetMetaData metadata = resultSet.getMetaData();
         int column_count = metadata.getColumnCount();
@@ -51,6 +50,8 @@ public class Database {
 
         resultSet.close();
         statement.close();
+
+        return result;
     }
     /*
     public static void main(String[] args) {
